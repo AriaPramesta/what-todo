@@ -1,7 +1,7 @@
     export const dataTodos = [
         {
             id: 1, 
-            title: "learn something new for at least 1 hour",
+            title: "Learn something new for at least 1 hour",
             isDone: false
         },
         {
