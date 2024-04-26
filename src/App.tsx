@@ -1,11 +1,9 @@
-import { Todo } from "./components/todo";
+import { Todos } from "./components/todos";
 
 export function App() {
   return (
     <div>
-      <h1>What To Do?</h1>
-
-      <Todo />
+      <Todos />
     </div>
   );
 }
