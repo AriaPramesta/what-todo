@@ -4,14 +4,14 @@ import { dataTodos } from "../data/todos";
 export function Todos() {
   const [todos, setTodos] = useState(dataTodos);
   const [newTodo, setNewTodo] = useState("");
-  const [searchTodo, setSearchTodo] = useState("");
+  const [searchKeyword, setSearchKeyword] = useState("");
 
   function searchTodoData(event: React.ChangeEvent<HTMLInputElement>) {
-    setSearchTodo(event.target.value.toLowerCase());
+    setSearchKeyword(event.target.value.toLowerCase());
   }
 
   const filteredTodos = todos.filter((todo) =>
-    todo.title.toLowerCase().includes(searchTodo.toLowerCase())
+    todo.title.toLowerCase().includes(searchKeyword.toLowerCase())
   );
 
   function addTodo(event: React.FormEvent<HTMLFormElement>) {
@@ -54,7 +54,7 @@ export function Todos() {
             type="text"
             id="searchTodo"
             name="q"
-            value={searchTodo}
+            value={searchKeyword}
             onChange={searchTodoData}
             placeholder="Search todos"
             className="rounded-md text-center focus:bg-black focus:text-white transition-all"
