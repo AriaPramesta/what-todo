@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { dataTodos } from "../data/todos";
 
 export function Todos() {
@@ -95,9 +96,13 @@ export function Todos() {
             key={todo.id}
             className="flex outline outline-2 outline-black p-4 mx-96 my-1 justify-between"
           >
-            <h2 className="flex items-center font-semibold text-lg">
+            <Link
+              to={`/detail/${todo.id}`}
+              className="flex items-center font-semibold text-lg hover:opacity-70 hover:underline"
+            >
               {todo.title}
-            </h2>
+            </Link>
+
             <button
               onClick={() => removeTodo(todo.id)}
               className="bg-black text-white font-semibold py-2 px-4 rounded hover:opacity-85"

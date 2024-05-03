@@ -1,4 +1,4 @@
-export const dataTodos = [
+export let dataTodos = [
   {
     id: 1,
     title: "Learn something new for at least 1 hour",
@@ -15,3 +15,18 @@ export const dataTodos = [
     isDone: true,
   },
 ];
+
+export function getTodo() {
+  return dataTodos;
+}
+
+export function addTodo({ title, isDone }: { title: string; isDone: boolean }) {
+  const nextId =
+    dataTodos.length > 0 ? dataTodos[dataTodos.length - 1].id + 1 : 1;
+
+  const newTodo = { id: nextId, title, isDone };
+
+  const newDataTodos = [...dataTodos, newTodo];
+
+  dataTodos = newDataTodos;
+}
