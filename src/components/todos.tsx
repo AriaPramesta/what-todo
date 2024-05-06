@@ -64,9 +64,12 @@ export function Todos() {
       </div>
 
       <form onSubmit={addTodo}>
-        <div className="flex outline outline-2 outline-black p-4 mx-96 mt-5 justify-between">
+        <div className="flex bg-black p-4 mx-96 mt-5 justify-between rounded">
           <div className="flex gap-5">
-            <label htmlFor="title" className="m-auto text-xl font-semibold">
+            <label
+              htmlFor="title"
+              className="m-auto text-xl font-semibold text-white"
+            >
               Add New To Do:
             </label>
             <input
@@ -76,13 +79,13 @@ export function Todos() {
               value={newTodo}
               onChange={handleInputChangeTodo}
               placeholder="Enter new thing here"
-              className="bg-black rounded text-center text-white focus:bg-white focus:text-black transition-all"
+              className="bg-white rounded text-center text-black focus:bg-black focus:text-white transition-all"
             />
           </div>
           <div>
             <button
               type="submit"
-              className="bg-black text-white font-semibold py-2 px-4 rounded hover:opacity-85"
+              className="bg-white text-black font-semibold py-2 px-4 rounded hover:opacity-85"
             >
               Add
             </button>
@@ -94,18 +97,18 @@ export function Todos() {
         {filteredTodos.map((todo) => (
           <li
             key={todo.id}
-            className="flex outline outline-2 outline-black p-4 mx-96 my-1 justify-between"
+            className="flex bg-black p-4 mx-96 my-1 justify-between rounded"
           >
             <Link
               to={`/detail/${todo.id}`}
-              className="flex items-center font-semibold text-lg hover:opacity-70 hover:underline"
+              className="flex items-center font-semibold text-lg hover:opacity-70 hover:underline text-white"
             >
               {todo.title}
             </Link>
 
             <button
               onClick={() => removeTodo(todo.id)}
-              className="bg-black text-white font-semibold py-2 px-4 rounded hover:opacity-85"
+              className="bg-white text-black font-semibold py-2 px-4 rounded hover:opacity-85"
             >
               Remove
             </button>

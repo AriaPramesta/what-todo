@@ -14,13 +14,29 @@ export let dataTodos = [
     title: "Update all project",
     isDone: true,
   },
+  {
+    id: 4,
+    title: "Learn React",
+    isDone: true,
+  },
+  {
+    id: 5,
+    title: "Read a book 1 hour a day",
+    isDone: false,
+  },
 ];
 
 export function getTodo() {
   return dataTodos;
 }
 
-export function addTodo({ title, isDone }: { title: string; isDone: boolean }) {
+export function addNewTodo({
+  title,
+  isDone,
+}: {
+  title: string;
+  isDone: boolean;
+}) {
   const nextId =
     dataTodos.length > 0 ? dataTodos[dataTodos.length - 1].id + 1 : 1;
 
@@ -29,4 +45,21 @@ export function addTodo({ title, isDone }: { title: string; isDone: boolean }) {
   const newDataTodos = [...dataTodos, newTodo];
 
   dataTodos = newDataTodos;
+  return dataTodos;
+}
+
+export function editTodo(
+  idToEdit: number,
+  updatedTodo: {
+    title: string;
+    isDone: boolean;
+  }
+) {
+  const indexToEdit = dataTodos.findIndex((todo) => todo.id === idToEdit);
+  if (indexToEdit !== -1) {
+    dataTodos[indexToEdit] = {
+      ...dataTodos[indexToEdit],
+      ...updatedTodo,
+    };
+  }
 }
