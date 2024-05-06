@@ -79,7 +79,7 @@ export function Todos() {
               value={newTodo}
               onChange={handleInputChangeTodo}
               placeholder="Enter new thing here"
-              className="bg-white rounded text-center text-black focus:bg-black focus:text-white transition-all"
+              className="bg-white rounded px-2 text-black focus:bg-black focus:text-white transition-all w-80"
             />
           </div>
           <div>
