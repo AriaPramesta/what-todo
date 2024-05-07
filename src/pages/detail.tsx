@@ -71,7 +71,7 @@ export default function Detail() {
                 Edit
               </button>
               <span className="text-white font-semibold mt-4 ">
-                {dataSingle.isDone ? "Done" : "Processing"}
+                {dataSingle.isDone ? "Done" : "On Process"}
               </span>
             </div>
           </div>
@@ -95,7 +95,7 @@ export default function Detail() {
                 className="w-5 h-5"
               />
               <span className="text-white font-semibold">
-                {isDone ? "Done" : "Processing"}
+                {isDone ? "Done" : "On Process"}
               </span>
             </div>
             <div className="flex gap-5 justify-end">
