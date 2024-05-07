@@ -5,8 +5,11 @@
 ## Features
 
 - Add new thing to do
-- Display your list to do
-- Search your list
+- Display your to do list
+- Search your to do list
+- Detail your to do list
+- Edit and
+- Remove
 
 ## Technologies
 
