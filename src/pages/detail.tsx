@@ -60,18 +60,20 @@ export default function Detail() {
                   checked={dataSingle.isDone}
                   hidden
                 />
-                <span className="text-white font-semibold -mt-2 ">
-                  {dataSingle.isDone ? "Done" : "Processing"}
-                </span>
               </div>
             </div>
 
-            <button
-              onClick={handleEdit}
-              className=" py-2 px-4 bg-white text-black rounded font-semibold hover:opacity-85 "
-            >
-              Edit
-            </button>
+            <div className="flex justify-between">
+              <button
+                onClick={handleEdit}
+                className=" py-2 px-4 bg-white text-black rounded font-semibold hover:opacity-85 "
+              >
+                Edit
+              </button>
+              <span className="text-white font-semibold mt-4 ">
+                {dataSingle.isDone ? "Done" : "Processing"}
+              </span>
+            </div>
           </div>
         )}
 
