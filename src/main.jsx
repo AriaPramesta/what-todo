@@ -1,13 +1,24 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
+import * as React from "react";
+import * as ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import App from "./App.jsx";
 import "./index.css";
+
+import { App } from "./App.jsx";
+import { Home } from "./pages/home.jsx";
+import { Form } from "./pages/form.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+  },
+  {
+    path: "/home",
+    element: <Home />,
+  },
+  {
+    path: "/add-todo",
+    element: <Form />,
   },
 ]);
 
