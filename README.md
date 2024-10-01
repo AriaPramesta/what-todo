@@ -14,6 +14,5 @@
 ## Technologies
 
 - React
-- TypeScript
 - Node.js Package Manager (npm)
 - Tailwind CSS
